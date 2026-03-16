@@ -91,4 +91,11 @@ dependencies {
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+
+    // root build.gradle
+buildscript {
+    dependencies {
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:2.7.7"
+    }
+}
 }
