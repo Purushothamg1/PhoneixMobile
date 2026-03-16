@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <external-files-path name="phoenix_invoices" path="PhoenixInvoices/"/>
+    <external-path name="external_root" path="."/>
+</paths>

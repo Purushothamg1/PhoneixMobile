@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/dashboardFragment">
+
+    <fragment android:id="@+id/dashboardFragment"
+        android:name="com.phoenix.invoice.ui.dashboard.DashboardFragment"
+        android:label="Dashboard">
+        <action android:id="@+id/action_dashboard_to_invoiceEdit"
+            app:destination="@id/invoiceEditFragment"/>
+        <action android:id="@+id/action_dashboard_to_invoiceDetail"
+            app:destination="@id/invoiceDetailFragment"/>
+    </fragment>
+
+    <fragment android:id="@+id/invoiceListFragment"
+        android:name="com.phoenix.invoice.ui.invoice.InvoiceListFragment"
+        android:label="Invoices">
+        <action android:id="@+id/action_invoiceList_to_invoiceEdit"
+            app:destination="@id/invoiceEditFragment"/>
+        <action android:id="@+id/action_invoiceList_to_invoiceDetail"
+            app:destination="@id/invoiceDetailFragment"/>
+    </fragment>
+
+    <fragment android:id="@+id/invoiceEditFragment"
+        android:name="com.phoenix.invoice.ui.invoice.InvoiceEditFragment"
+        android:label="Invoice">
+        <argument android:name="invoiceId" android:defaultValue="0"
+            app:argType="long"/>
+        <action android:id="@+id/action_invoiceEdit_to_invoiceDetail"
+            app:destination="@id/invoiceDetailFragment"
+            app:popUpTo="@id/invoiceEditFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+    <fragment android:id="@+id/invoiceDetailFragment"
+        android:name="com.phoenix.invoice.ui.invoice.InvoiceDetailFragment"
+        android:label="Invoice Detail">
+        <argument android:name="invoiceId" android:defaultValue="0"
+            app:argType="long"/>
+        <action android:id="@+id/action_invoiceDetail_to_invoiceEdit"
+            app:destination="@id/invoiceEditFragment"/>
+    </fragment>
+
+    <fragment android:id="@+id/customerFragment"
+        android:name="com.phoenix.invoice.ui.customer.CustomerFragment"
+        android:label="Customers"/>
+
+    <fragment android:id="@+id/productFragment"
+        android:name="com.phoenix.invoice.ui.product.ProductFragment"
+        android:label="Products"/>
+
+    <fragment android:id="@+id/settingsFragment"
+        android:name="com.phoenix.invoice.ui.settings.SettingsFragment"
+        android:label="Settings"/>
+</navigation>

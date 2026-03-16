@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="@color/bg_page">
+    <com.google.android.material.appbar.MaterialToolbar android:id="@+id/toolbar"
+        android:layout_width="match_parent" android:layout_height="?attr/actionBarSize"
+        android:background="@color/navy" app:titleTextColor="@color/white"
+        app:navigationIconTint="@color/white" app:navigationIcon="@drawable/ic_arrow_back"
+        app:title="Company Settings"/>
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent"
+        android:layout_height="0dp" android:layout_weight="1">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="12dp">
+            <com.google.android.material.card.MaterialCardView android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginBottom="10dp"
+                app:cardCornerRadius="12dp" app:cardElevation="2dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="14dp">
+                    <TextView android:text="🏢 Company Info" android:textColor="@color/red_accent"
+                        android:textSize="14sp" android:textStyle="bold"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10dp"/>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="12dp">
+                        <ImageView android:id="@+id/ivLogo" android:layout_width="64dp" android:layout_height="64dp"
+                            android:scaleType="centerCrop" android:background="@color/surface_variant"
+                            android:visibility="gone"/>
+                        <com.google.android.material.button.MaterialButton android:id="@+id/btnUploadLogo"
+                            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp" android:text="📷 Upload Logo" app:cornerRadius="8dp"/>
+                    </LinearLayout>
+                    <com.google.android.material.textfield.TextInputLayout style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:layout_marginBottom="6dp" android:hint="Company Name *">
+                        <com.google.android.material.textfield.TextInputEditText android:id="@+id/etName"
+                            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:layout_marginBottom="6dp" android:hint="Address">
+                        <com.google.android.material.textfield.TextInputEditText android:id="@+id/etAddress"
+                            android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:inputType="textMultiLine" android:maxLines="2"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                        <com.google.android.material.textfield.TextInputLayout style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                            android:layout_marginEnd="6dp" android:layout_marginBottom="6dp" android:hint="Phone">
+                            <com.google.android.material.textfield.TextInputEditText android:id="@+id/etPhone"
+                                android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="phone"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+                        <com.google.android.material.textfield.TextInputLayout style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                            android:layout_marginBottom="6dp" android:hint="Email">
+                            <com.google.android.material.textfield.TextInputEditText android:id="@+id/etEmail"
+                                android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textEmailAddress"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                    <com.google.android.material.textfield.TextInputLayout style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:layout_marginBottom="6dp" android:hint="GSTIN">
+                        <com.google.android.material.textfield.TextInputEditText android:id="@+id/etGstin"
+                            android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textCapCharacters"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                        <com.google.android.material.textfield.TextInputLayout style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                            android:layout_marginEnd="6dp" android:hint="Invoice Prefix">
+                            <com.google.android.material.textfield.TextInputEditText android:id="@+id/etPrefix"
+                                android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+                        <com.google.android.material.textfield.TextInputLayout style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                            android:hint="Default Tax %">
+                            <com.google.android.material.textfield.TextInputEditText android:id="@+id/etDefaultTax"
+                                android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="numberDecimal"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                    <com.google.android.material.textfield.TextInputLayout style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:layout_marginBottom="6dp" android:hint="Bank Account Details" android:layout_marginTop="6dp">
+                        <com.google.android.material.textfield.TextInputEditText android:id="@+id/etBankDetails"
+                            android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:inputType="textMultiLine" android:maxLines="3"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="UPI ID">
+                        <com.google.android.material.textfield.TextInputEditText android:id="@+id/etUpi"
+                            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnSave"
+                android:layout_width="match_parent" android:layout_height="52dp"
+                android:text="✓ Save Settings" android:textSize="15sp" android:textStyle="bold"
+                app:backgroundTint="@color/red_accent" app:cornerRadius="12dp"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

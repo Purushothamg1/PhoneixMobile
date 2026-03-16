@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="navy">#16213E</color>
+    <color name="navy_dark">#0F1B35</color>
+    <color name="red_accent">#E94560</color>
+    <color name="gold">#FFB74D</color>
+    <color name="bg_page">#F0F2F5</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="surface_variant">#F5F7FA</color>
+    <color name="on_surface">#1A1A2E</color>
+    <color name="on_surface_variant">#546E7A</color>
+    <color name="card_border">#E8ECF0</color>
+    <color name="success">#2E7D32</color>
+    <color name="success_bg">#E8F5E9</color>
+    <color name="warning">#E65100</color>
+    <color name="warning_bg">#FFF3E0</color>
+    <color name="error">#C62828</color>
+    <color name="error_bg">#FFEBEE</color>
+    <color name="whatsapp">#25D366</color>
+    <color name="divider_line">#E0E6ED</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="colorPrimary">#E94560</color>
+    <color name="colorPrimaryDark">#16213E</color>
+    <color name="colorAccent">#FFB74D</color>
+</resources>

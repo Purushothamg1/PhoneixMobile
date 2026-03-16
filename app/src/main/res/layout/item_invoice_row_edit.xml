@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:orientation="vertical" android:paddingTop="6dp" android:paddingBottom="4dp">
+    <!-- Row 1: number + name + scan + delete -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:gravity="center_vertical">
+        <TextView android:id="@+id/tvIndex" android:layout_width="20dp" android:layout_height="20dp"
+            android:background="@color/red_accent" android:gravity="center" android:text="1"
+            android:textColor="@color/white" android:textSize="9sp" android:textStyle="bold"/>
+        <EditText android:id="@+id/etName" android:layout_width="0dp" android:layout_height="42dp"
+            android:layout_weight="1" android:layout_marginHorizontal="4dp"
+            android:hint="Item name" android:textSize="12sp" android:background="@drawable/bg_field"
+            android:paddingHorizontal="8dp" android:inputType="textCapSentences" android:maxLines="1"/>
+        <ImageButton android:id="@+id/btnScanRow" android:layout_width="28dp" android:layout_height="28dp"
+            android:src="@android:drawable/ic_menu_camera"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_marginEnd="2dp"/>
+        <ImageButton android:id="@+id/btnDelete" android:layout_width="28dp" android:layout_height="28dp"
+            android:src="@android:drawable/ic_delete"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:tint="@color/error"/>
+    </LinearLayout>
+    <!-- Barcode badge -->
+    <TextView android:id="@+id/tvBarcode" android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_marginStart="26dp" android:layout_marginTop="2dp"
+        android:textSize="9sp" android:textColor="@color/on_surface_variant"
+        android:visibility="gone"/>
+    <!-- Row 2: qty | price | disc | tax | total -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:paddingStart="26dp" android:layout_marginTop="3dp">
+        <EditText android:id="@+id/etQty" android:layout_width="0dp" android:layout_height="36dp"
+            android:layout_weight="0.8" android:layout_marginEnd="2dp"
+            android:hint="Qty" android:textSize="11sp" android:background="@drawable/bg_field"
+            android:paddingHorizontal="6dp" android:inputType="numberDecimal" android:gravity="center"/>
+        <EditText android:id="@+id/etPrice" android:layout_width="0dp" android:layout_height="36dp"
+            android:layout_weight="1.2" android:layout_marginEnd="2dp"
+            android:hint="₹Rate" android:textSize="11sp" android:background="@drawable/bg_field"
+            android:paddingHorizontal="6dp" android:inputType="numberDecimal"/>
+        <EditText android:id="@+id/etDiscount" android:layout_width="0dp" android:layout_height="36dp"
+            android:layout_weight="0.8" android:layout_marginEnd="2dp"
+            android:hint="Disc%" android:textSize="11sp" android:background="@drawable/bg_field"
+            android:paddingHorizontal="4dp" android:inputType="numberDecimal"/>
+        <EditText android:id="@+id/etTax" android:layout_width="0dp" android:layout_height="36dp"
+            android:layout_weight="0.8" android:layout_marginEnd="2dp"
+            android:hint="Tax%" android:textSize="11sp" android:background="@drawable/bg_field"
+            android:paddingHorizontal="4dp" android:inputType="numberDecimal"/>
+        <TextView android:id="@+id/tvTotal" android:layout_width="0dp" android:layout_height="36dp"
+            android:layout_weight="1.2" android:background="@color/surface_variant"
+            android:gravity="center_vertical|end" android:paddingEnd="6dp"
+            android:text="₹0.00" android:textColor="@color/red_accent" android:textSize="11sp" android:textStyle="bold"/>
+    </LinearLayout>
+    <View android:layout_width="match_parent" android:layout_height="1dp"
+        android:background="@color/divider_line" android:layout_marginTop="6dp"/>
+</LinearLayout>

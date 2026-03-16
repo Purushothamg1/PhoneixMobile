@@ -1,0 +1,2 @@
+rootProject.name = "PhoenixInvoice"
+include ':app'

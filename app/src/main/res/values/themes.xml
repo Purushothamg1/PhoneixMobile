@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.PhoenixInvoice" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/red_accent</item>
+        <item name="colorPrimaryDark">@color/navy</item>
+        <item name="colorAccent">@color/gold</item>
+        <item name="android:windowBackground">@color/bg_page</item>
+        <item name="android:statusBarColor">@color/navy</item>
+        <item name="android:navigationBarColor">@color/navy</item>
+    </style>
+    <style name="PhoenixToolbar" parent="Widget.MaterialComponents.Toolbar.Primary">
+        <item name="android:background">@color/navy</item>
+        <item name="titleTextColor">@color/white</item>
+        <item name="navigationIconTint">@color/white</item>
+    </style>
+</resources>
